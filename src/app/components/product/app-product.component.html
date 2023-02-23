@@ -1,0 +1,45 @@
+<div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded product-item">
+  <div class="product-item-index">{{ productDetails?.index }}</div>
+  <div class="product-item-main">
+    <div class="product-item-image">
+      <img
+        [src]="'../../assets/images/' + productDetails?.image"
+        [alt]="productDetails.title"
+      />
+      <span>{{ productDetails?.title }}</span>
+    </div>
+
+    <div class="product-item-extra">
+      <ul  class="tag-list-main">
+        <li
+          *ngFor="let tag of productDetails.tags"
+          class="badge text-bg-light tag-list mb-1"
+        >
+          {{ tag }}
+        </li>
+      </ul>
+      <span class="mb-1 product-item-rating"
+        >{{ productDetails?.rating }} <i class="fa-solid fa-star"></i
+      ></span>
+      <span class="mb-1 product-item-price"
+        >{{ productDetails?.price }} <i class="fa-solid fa-euro-sign"></i
+      ></span>
+      <div class="btn btn-primary product-item-button" (click)="onShowDetails()">
+        {{ isExpandable ? "less details" : "show details" }}
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isExpandable" class="mt-3 product-item-details">
+    <ul class="tag-list-details">
+      <li
+        *ngFor="let tag of productDetails.tags"
+        class="me-2 badge text-bg-light"
+      >
+        {{ tag }}
+      </li>
+    </ul>
+    <p>
+      {{ productDetails?.description }}
+    </p>
+  </div>
+</div>

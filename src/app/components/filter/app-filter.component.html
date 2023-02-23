@@ -1,0 +1,40 @@
+<div class="filter-wrapper">
+  <div class="dropdown me-1 filter-sorter">
+    <i
+      class="fa-solid fa-filter"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+      style="cursor: pointer"
+    ></i>
+    <ul class="dropdown-menu">
+      <li
+        class="dropdown-item"
+        *ngFor="let option of sortingList"
+        (click)="handleSortingSelection(option.value)"
+        [ngClass]="selectedSortingType === option.value && 'active'"
+      >
+        {{ option.label }}
+      </li>
+    </ul>
+    <label
+      data-bs-toggle="dropdown"
+      style="cursor: pointer"
+      aria-expanded="false"
+      class="mx-2"
+      >Sorting options</label
+    >
+  </div>
+  <div class="input-group mb-3 mt-3 filter-input">
+    <span class="input-group-text" id="basic-addon1"
+      ><i class="fa-solid fa-euro-sign"></i
+    ></span>
+    <input
+      type="number"
+      (input)="handlePriceFiltering($event)"
+      class="form-control"
+      placeholder="filter by price"
+      aria-label="price"
+      aria-describedby="basic-price-input"
+    />
+  </div>
+</div>

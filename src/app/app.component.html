@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="app-wrapper mt-3">
+    <div class="filter">
+      <app-filter
+        (filterItemEvent)="handleDataFilter($event)"
+      ></app-filter>
+    </div>
+
+
+    <div class="products">
+      <app-product
+        *ngFor="let product of productListFiltered"
+        [productDetails]="product"
+      ></app-product>
+    </div>
+  </div>
+</div>

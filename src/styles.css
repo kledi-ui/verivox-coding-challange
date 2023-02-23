@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+
+ul{
+  padding: 0px !important;
+}
+
+.dropdown-item{
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  /* CSS */
+  .filter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .filter-sorter {
+    flex: 3;
+  }
+
+  .filter-input {
+    flex: 1;
+  }
+
+  .product-item{
+    flex-direction: row !important;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .product-item-index{
+    flex: 1;
+  }
+
+  .product-item-main{
+    flex: 11;
+    grid-template-columns: 4fr 8fr !important;
+  }
+
+  .tag-list-main{
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .product-item-extra{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-item-rating{
+    order: 3;
+  }
+  .product-item-button{
+    justify-self: end;
+    order: 4;
+  }
+  .product-item-price{
+    justify-self: end;
+    align-self: center;
+  }
+  .tag-list-details{
+    display: none !important;
+  }
+}
+
+@media (min-width: 1025px) {
+
+  /* CSS */
+
+  .app-wrapper{
+    display: flex;
+  }
+
+  .filter{
+    flex: 4;
+    margin-right: 20px;
+  }
+
+  .products{
+    flex: 8;
+  }
+
+  .filter-wrapper{
+    position: sticky;
+    top: 20px;
+    align-items: baseline;
+    flex-direction: column;
+  }
+
+  .tag-list-details{
+    display: none !important;
+  }
+
+}
+
+

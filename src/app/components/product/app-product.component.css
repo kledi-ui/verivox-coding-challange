@@ -1,0 +1,32 @@
+.product-item-image img {
+  width: 50px;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-item-main {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
+
+.product-item-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.product-item-extra {
+  display: grid;
+  justify-content: end;
+  justify-items: end;
+}
+
+.tag-list-main{
+  display: none;
+}
+
+
